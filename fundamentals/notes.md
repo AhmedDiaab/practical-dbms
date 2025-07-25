@@ -18,5 +18,6 @@ This section introduces the foundational concepts of databases every backend dev
 
 
 # Challenges
-- add `country` to users table.
+- Add `country` to users table.
 - Create `accounts` table which contains `(id, balance, user_id)`
+- Update query `Simulate a simple transaction` to get user with the name of `x` 
