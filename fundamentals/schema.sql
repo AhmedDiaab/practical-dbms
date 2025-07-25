@@ -1,3 +1,15 @@
+-- Create database if not exist
+DO
+$$
+BEGIN
+   IF NOT EXISTS (
+      SELECT FROM pg_database WHERE datname = 'practical_dbms'
+   ) THEN
+      CREATE DATABASE practical_dbms;
+   END IF;
+END
+$$;
+
 CREATE TABLE
     users (
         id SERIAL PRIMARY KEY,
