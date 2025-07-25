@@ -15,3 +15,8 @@ This section introduces the foundational concepts of databases every backend dev
 - Understand how relational databases work
 - Write basic SQL queries
 - Practice schema normalization
+
+
+# Challenges
+- add `country` to users table.
+- Create `accounts` table which contains `(id, balance, user_id)`
