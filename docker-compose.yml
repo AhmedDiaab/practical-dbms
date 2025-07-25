@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:16
+    container_name: db-practice
+    restart: always
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: "${DATABASE_NAME}"
+      POSTGRES_USER: "${DATABASE_USERNAME}"
+      POSTGRES_PASSWORD: "${DATABASE_PASSWORD}"
+    ports:
+      - "${DATABASE_PORT}:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./schema-design:/docker-entrypoint-initdb.d  # auto-run schema.sql & seed.sql
+
+volumes:
+  db_data:
